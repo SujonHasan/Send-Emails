@@ -1,13 +1,18 @@
-#Node Contact Form
-## Simple Node.js/Express app using Nodemailer to send emails
+# Node Contact Form
+## Simple Node.js/Express app using Nodemailer to Send Emails
 ---
 
 # Install Dependencies
 
 ```
-# express
-# dotenv
-# ejs
-# nodemailer
-# body-parser
+ express
+ dotenv
+ ejs
+ nodemailer
+ body-parser
+```
+## Run
+---
+```
+npm run dev
 ```
