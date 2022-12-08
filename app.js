@@ -52,24 +52,17 @@ app.post('/send', (req, res) =>{
     })
 
     let mailOption = {
-        // from: "2020200010005@seu.edu.bd", // sender address
-        // to: "sujonislamjoy@gmail.com", // list of receiver
-        to: process.env.TO_MAIL,
+        to: process.env.TO_MAIL, // receive address
         subject: "Node contace Request", // subject line
         text: 'hello world', // plain text body
         html: output // html body
-
     }
-
 
     transporter.sendMail(mailOption, (err, info) =>{
 
         if(err) return console.log(err);
         console.log('Message sent : %s', info.messageId);
-        // console.log('Preview URL : %s', info.getTestMessageUrl(info));
         res.render('contact', {msg: 'Email has been sent'});
-        // res.render('contact');
-        // res.redirect('contact');
     });
 })
 
